@@ -15,8 +15,10 @@
     --color-note1: #9c9ea6;
     --color-border-gray: #eaeaea;
     --color-border-400: #c7c8c9;
-
     --font-poppins: "poppins", sans-serif;
+
+
+    --text-clamp1: clamp(1rem, 0.4355rem + 2.1505vw, 2.5rem);
 }
 
 body {
