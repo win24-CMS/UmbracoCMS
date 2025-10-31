@@ -1,4 +1,5 @@
 ﻿@import "tailwindcss";
+@import "./forms.css";
 
 @theme {
     --color-neutral: #ffffff;
@@ -23,6 +24,10 @@
     --text-rte-md: 1.25rem;
     --text-rte-sm: 1rem;
     --text-rte-xs: .875rem;
+
+    --text-rte-h1: 4.375rem;
+    --text-rte-h2: 2.5rem;
+    --text-rte-h3: 1.25rem;
 }
 
 body {
@@ -53,6 +58,10 @@ body {
     @apply mb-3;
 }
 
-img {
+.rte-img-full {
     @apply w-full h-auto object-cover;
 }
+
+/*img {
+    @apply w-full h-auto object-cover;
+}*/
