@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSetting = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var copyRights = siteSetting?.FooterCopyrightInformation ?? "Ingen copyright information hittades";
+}
+
+<div class="bg-dark">
+    <div class="max-w-7xl mx-auto px-4 flex items-center">
+        <p class="text-xs text-body-text">@copyRights</p>
+
+        <a href="@siteSetting?.FooterCreditsInformationLink" target="_blank" class="flex items-center justify-center py-3 px-1 text-xs text-secondary">
+            Themesflat
+        </a>
+    </div>
+</div>
