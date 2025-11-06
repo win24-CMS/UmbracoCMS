@@ -4,6 +4,8 @@
     var content = (ContentModels.LetUsKnowSection)Model.Content;
     var settings = Model.Settings as ContentModels.LetUsKnowSettings;
 
+    var sectionColor = settings?.LetUsKnowBgColor?.Color ?? "#ffffff";
+
     var rootContent = Umbraco.ContentAtRoot();
     var siteSetting = rootContent.OfType<SiteSettings>().FirstOrDefault();
 }
