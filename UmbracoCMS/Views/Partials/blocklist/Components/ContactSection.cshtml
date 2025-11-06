@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactSection)Model.Content;
+
+    var bgImage = content?.ContactBgImage?.Url() ?? "~/images/Risk-Management";
+}
+
+<section class="bg-no-repeat h-[70vh]" style="background-image: url('@bgImage')">
+    <div class="max-w-7xl mx-auto px4">
+        <div class="h-[400px] bg-red-400 py-[4rem] mt-[4rem]">
+            hej
+        </div>
+
+    </div>
+</section>
