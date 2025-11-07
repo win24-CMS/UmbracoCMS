@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ReviewSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ReviewSettings;
+
+    var sectionColor = settings?.ReviewSettingsBgColor?.Label.ToLower() ?? "#ffffff";
+}
+
+<section class=" bg-@sectionColor flex items-center">
+    <div class="max-w-7xl mx-auto pr-4 pl-[5rem] py-[2rem]">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col justify-center w-5/12 py-6">
+                <div class="rte">@Html.Raw(content.ReviewSectionBodyContent)</div>
+            </div>
+        </div>
+    </div>
+    <div class="w-7/12">
+        @if (content.ReviewSectionRatorImage != null)
+        {
+            <img src="@content.ReviewSectionRatorImage.Url()" class="w-full h-full object cover" />
+        }
+    </div>
+</section>
