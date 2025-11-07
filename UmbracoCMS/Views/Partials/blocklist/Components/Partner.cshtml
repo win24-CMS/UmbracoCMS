@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Partner)Model.Content;
+}
+
+<div class="flex flex-col h-full">
+    @if (content.PartnerImage != null)
+    {
+        <img src="@content.PartnerImage.Url()" alt="@content.PartnerName" class="w-full object-cover" />
+    }
+</div>
