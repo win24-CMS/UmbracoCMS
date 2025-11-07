@@ -6,7 +6,7 @@
 
 <partial name="Partials/Layout/_PageBanner" model="(IPageBanner)Model" />
 
-<section class="py-16">
+<section class="pt-16">
 	<div class="max-w-7xl mx-auto px-4">
 		<div class="flex flex-row justify-between">
 			<aside class="w-3/12 flex flex-col gap-4">
@@ -18,8 +18,8 @@
 				<div class="rte">@Html.Raw(Model.ServiceDetailBody)</div>
 			</div>
 		</div>
-		<div>
-			@Html.GetBlockListHtml(Model.ServiceDetialLetUsKnow)
-		</div>
+	</div>
+	<div>
+		@Html.GetBlockListHtml(Model.ServiceDetialLetUsKnow)
 	</div>
 </section>
