@@ -11,6 +11,7 @@
 		<div class="flex flex-row justify-between">
 			<aside class="w-3/12 flex flex-col gap-4">
 				@Html.GetBlockListHtml(Model.ServiceDetailAsides)
+				@Html.GetBlockListHtml(Model.ServiceDetailAsideHelpForm)
 			</aside>
 			<div class="block w-px bg-border-gray"></div>
 
@@ -18,6 +19,9 @@
 				<div class="rte">@Html.Raw(Model.ServiceDetailBody)</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		@Html.GetBlockListHtml(Model.ServiceDetailQuestion)
 	</div>
 	<div>
 		@Html.GetBlockListHtml(Model.ServiceDetialLetUsKnow)

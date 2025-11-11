@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoCMS.ViewModels
+@{
+    var content = (ContentModels.ServiceHelpSection)Model.Content;
+
+    var formViewModel = new HelpFormViewModel
+    {
+    };
+}
+
+<section class="relative rounded-sm py-10 px-5 mt-4">
+
+    <div class="absolute top-0 right-0 -z-10 w-full h-full">
+        <img src="~/images/MailContactBackground.svg" alt="Envalope" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="flex w-full h-full flex-col gap-8">
+
+        <div class="flex w-full flex-col gap-4">
+            <p class="text-2xl font-semibold text-secondary">@content.ServiceHelpLabel</p>
+            <p class="text-sm text-accent">@content.ServiceHelpText</p>
+        </div>
+
+        <partial name="Partials/Forms/_HelpForm" model="formViewModel" />
+
+    </div>
+
+</section>

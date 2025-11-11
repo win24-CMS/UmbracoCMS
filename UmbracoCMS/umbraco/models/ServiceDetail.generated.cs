@@ -50,6 +50,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Help Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.2+8aa9dc8")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("serviceDetailAsideHelpForm")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ServiceDetailAsideHelpForm => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "serviceDetailAsideHelpForm");
+
+		///<summary>
 		/// Widgets
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.2+8aa9dc8")]
@@ -72,6 +80,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("serviceDetailExcerpt")]
 		public virtual string ServiceDetailExcerpt => this.Value<string>(_publishedValueFallback, "serviceDetailExcerpt");
+
+		///<summary>
+		/// Question
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.2+8aa9dc8")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("serviceDetailQuestion")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ServiceDetailQuestion => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "serviceDetailQuestion");
 
 		///<summary>
 		/// Thumbnail
