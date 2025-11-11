@@ -1,0 +1,17 @@
+﻿@using UmbracoCMS.ViewModels
+@model HelpFormViewModel
+
+@using (Html.BeginUmbracoForm("HandleHelpForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "helpForm" }))
+{
+    <div class="flex flex-col">
+
+        <div class="relative w-full">
+            <label asp-for="HelpEmail" class="sr-only"></label>
+            <input asp-for="HelpEmail" type="text" placeholder="@Html.DisplayNameFor(x => x.HelpEmail)" class="w-full p-3 italic bg-neutral border border-gray-300 rounded-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+            
+            <i class="fa-regular fa-envelope text-body-text absolute right-3 top-1/2 -translate-y-1/2"></i>
+        </div>
+        <span asp-validation-for="HelpEmail"></span>
+
+    </div>
+}

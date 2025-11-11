@@ -4,13 +4,13 @@
     var content = (ContentModels.LetUsKnowSection)Model.Content;
     var settings = Model.Settings as ContentModels.LetUsKnowSettings;
 
-    var sectionColor = settings?.LetUsKnowBgColor?.Label.ToLower() ?? "#ffffff";
+    var sectionColor = settings?.LetUsKnowBgColor?.Color ?? "#ffffff";
 
     var rootContent = Umbraco.ContentAtRoot();
     var siteSetting = rootContent.OfType<SiteSettings>().FirstOrDefault();
 }
 
-<section class="pt-18 bg-@sectionColor">
+<section class="pt-18" style="background-color:@sectionColor">
     <div class="max-w-7xl mx-auto px-4 flex gap-4">
         <div class="w-7/12">
             @if (content.LetUsKnowImage != null)
