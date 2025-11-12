@@ -45,12 +45,12 @@ public class FormController(IUmbracoContextAccessor umbracoContextAccessor, IUmb
         var result = _formSubmissions.SaveQuestionRequest(model);
         if (!result)
         {
-            TempData["FormError"] = "Something went wrong, please try again later.";
+            TempData["QuestionFormError"] = "Something went wrong, please try again later.";
 
             return RedirectToCurrentUmbracoPage();
         }
 
-        TempData["FormSuccess"] = "Thank you! Your request was successfull. We will get back to you.";
+        TempData["QuestionFormSuccess"] = "Thank you! Your request was successfull. We will get back to you.";
 
         return RedirectToCurrentUmbracoPage();
     }
@@ -65,12 +65,12 @@ public class FormController(IUmbracoContextAccessor umbracoContextAccessor, IUmb
         var result = _formSubmissions.SaveHelpRequest(model);
         if (!result)
         {
-            TempData["FormError"] = "Something went wrong, please try again later.";
+            TempData["HelpFormError"] = "Something went wrong, please try again later.";
 
             return RedirectToCurrentUmbracoPage();
         }
 
-        TempData["FormSuccess"] = "Thank you! Your request was successfull. We will get back to you.";
+        TempData["HelpFormSuccess"] = "Thank you! Your request was successfull. We will get back to you.";
 
         return RedirectToCurrentUmbracoPage();
     }
