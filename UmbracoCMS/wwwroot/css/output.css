@@ -240,6 +240,9 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .inset-10 {
+    inset: calc(var(--spacing) * 10);
+  }
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
@@ -249,32 +252,23 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-5 {
-    top: calc(var(--spacing) * 5);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
   .right-3 {
     right: calc(var(--spacing) * 3);
   }
-  .right-10 {
-    right: calc(var(--spacing) * 10);
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
   }
   .-z-10 {
     z-index: calc(10 * -1);
   }
-  .z-1 {
-    z-index: 1;
-  }
-  .z-2 {
-    z-index: 2;
+  .z-9 {
+    z-index: 9;
   }
   .z-10 {
     z-index: 10;
-  }
-  .z-999 {
-    z-index: 999;
   }
   .z-\[99\] {
     z-index: 99;
@@ -384,11 +378,20 @@
   .w-8\/12 {
     width: calc(8/12 * 100%);
   }
+  .w-\[40\%\] {
+    width: 40%;
+  }
   .w-\[45\%\] {
     width: 45%;
   }
-  .w-\[80\%\] {
-    width: 80%;
+  .w-\[50\%\] {
+    width: 50%;
+  }
+  .w-\[60\%\] {
+    width: 60%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
   }
   .w-\[85\%\] {
     width: 85%;
@@ -514,9 +517,6 @@
   .border-white-100 {
     border-color: var(--color-white-100);
   }
-  .bg-\[\~\/images\/Bg-Email-Icon\.svg\] {
-    background-color: ~/images/Bg-Email-Icon.svg;
-  }
   .bg-border-gray {
     background-color: var(--color-border-gray);
   }
@@ -538,26 +538,14 @@
   .bg-white-100 {
     background-color: var(--color-white-100);
   }
-  .\[background-image\:url\(\'\'\)\] {
-    background-image: url('');
-  }
-  .\[background-image\:url\(\'\/images\/Bg-Email-Icon\.svg\'\)\] {
-    background-image: url('/images/Bg-Email-Icon.svg');
-  }
   .\[background-image\:url\(\'\/images\/Globe2\.svg\'\)\,url\(\'\/images\/Globe1\.svg\'\)\] {
     background-image: url('/images/Globe2.svg'),url('/images/Globe1.svg');
-  }
-  .\[background-image\:url\(\'\/images\/MailContactBackground\.svg\'\)\] {
-    background-image: url('/images/MailContactBackground.svg');
   }
   .bg-cover {
     background-size: cover;
   }
   .\[background-position\:left_bottom\,top_right\] {
     background-position: left bottom,top right;
-  }
-  .\[background-position\:left_bottom\] {
-    background-position: left bottom;
   }
   .bg-center {
     background-position: center;
@@ -570,9 +558,6 @@
   }
   .object-fill {
     object-fit: fill;
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -637,9 +622,6 @@
   .py-\[7rem\] {
     padding-block: 7rem;
   }
-  .pt-1 {
-    padding-top: calc(var(--spacing) * 1);
-  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
@@ -655,20 +637,32 @@
   .pt-18 {
     padding-top: calc(var(--spacing) * 18);
   }
+  .pt-\[4rem\] {
+    padding-top: 4rem;
+  }
+  .pt-\[6rem\] {
+    padding-top: 6rem;
+  }
+  .pt-\[7rem\] {
+    padding-top: 7rem;
+  }
+  .pt-\[8rem\] {
+    padding-top: 8rem;
+  }
+  .pt-\[9rem\] {
+    padding-top: 9rem;
+  }
+  .pt-\[10rem\] {
+    padding-top: 10rem;
+  }
+  .pt-\[11rem\] {
+    padding-top: 11rem;
+  }
   .pt-\[18\.5rem\] {
     padding-top: 18.5rem;
   }
-  .pr-2 {
-    padding-right: calc(var(--spacing) * 2);
-  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
-  }
-  .pr-5 {
-    padding-right: calc(var(--spacing) * 5);
-  }
-  .pr-6 {
-    padding-right: calc(var(--spacing) * 6);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
@@ -732,9 +726,6 @@
   }
   .text-\[10px\] {
     font-size: 10px;
-  }
-  .text-\[10rem\] {
-    font-size: 10rem;
   }
   .text-rte-h1 {
     font-size: var(--text-rte-h1);
