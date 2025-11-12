@@ -24,6 +24,19 @@
 
             <partial name="Partials/Forms/_QuestionForm" model="formViewModel" />
 
+            @if (TempData["QuestionFormSuccess"] != null)
+            {
+                <div class="bg-green-50 text-green-700 p-4 mx-[2rem] mb-4 rounded-md">
+                    @TempData["QuestionFormSuccess"]
+                </div>
+            }
+            else if (TempData["QuestionFormError"] != null)
+            {
+                <div class="bg-red-50 text-red-700 p-4 mx-[2rem] mb-4 rounded-md">
+                    @TempData["QuestionFormError"]
+                </div>
+            }
+
 
         </div>
 
