@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessStoriesSection)Model.Content;
+    var successSettings = Model.Settings as ContentModels.SuccessStoriesSettings;
+
+    var bgImage = content?.SuccessStoriesBgImage?.Url() ?? "~/images/Risk-Management";
+    var bgColor = successSettings?.SuccessStoriesBgColor?.Color ?? "#ffffff";
+}
+
+<section class="relative flex flex-col items-center">
+
+    <div class="h-[85%] w-full bg-cover absolute" style="background-color:@bgColor">
+    </div>
+
+    <div class="absolute max-w-7xl mx-auto px-4 pt-[7rem]">
+        @if (content?.SuccessStoriesBgImage != null)
+        {
+            <img src="@content.SuccessStoriesBgImage.Url()" class="w-full h-full object-cover" />
+        }
+    </div>
+
+    <div class="mx-auto max-w-6xl relative z-10 pt-[6rem]">
+
+        <div class="w-full flex flex-col justify-center">
+
+            <div class="flex flex-col items-center text-center gap-5">
+                <p class="text-sm font-bold text-secondary">@content?.SuccessStoriesLabel</p>
+                <h2 class="text-3xl font-bold sm:text-4xl text-neutral">@content?.SuccessStoriesTitle</h2>
+                <div class="flex flex-row gap-4 justify-between py-10">
+                    <div class="rte w-3/12">@Html.Raw(content?.SuccessStoriesCustomers)</div>
+                    <div class="rte w-3/12">@Html.Raw(content?.SuccessStoriesProjects)</div>
+                    <div class="rte w-3/12">@Html.Raw(content?.SuccessStoriesBranches)</div>
+                </div>
+                <div>
+                    @if (content?.SuccessStoriesMeetingImage != null)
+                    {
+                        <img src="@content.SuccessStoriesMeetingImage.Url()" class="w-full h-full object-cover" />
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

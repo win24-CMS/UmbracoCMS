@@ -240,9 +240,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .inset-10 {
-    inset: calc(var(--spacing) * 10);
-  }
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
@@ -258,8 +255,11 @@
   .right-3 {
     right: calc(var(--spacing) * 3);
   }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
+  .-z-1 {
+    z-index: calc(1 * -1);
+  }
+  .-z-9 {
+    z-index: calc(9 * -1);
   }
   .-z-10 {
     z-index: calc(10 * -1);
@@ -312,6 +312,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -338,6 +341,9 @@
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
+  }
+  .h-\[85\%\] {
+    height: 85%;
   }
   .h-\[90\%\] {
     height: 90%;
@@ -366,6 +372,9 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
+  .w-4\/12 {
+    width: calc(4/12 * 100%);
+  }
   .w-5\/12 {
     width: calc(5/12 * 100%);
   }
@@ -378,23 +387,11 @@
   .w-8\/12 {
     width: calc(8/12 * 100%);
   }
-  .w-\[40\%\] {
-    width: 40%;
-  }
   .w-\[45\%\] {
     width: 45%;
   }
-  .w-\[50\%\] {
-    width: 50%;
-  }
   .w-\[60\%\] {
     width: 60%;
-  }
-  .w-\[70\%\] {
-    width: 70%;
-  }
-  .w-\[85\%\] {
-    width: 85%;
   }
   .w-full {
     width: 100%;
@@ -457,6 +454,9 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -516,6 +516,9 @@
   }
   .border-white-100 {
     border-color: var(--color-white-100);
+  }
+  .bg-\[\@bgColor\] {
+    background-color: @bgColor;
   }
   .bg-border-gray {
     background-color: var(--color-border-gray);
@@ -598,6 +601,9 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
   }
@@ -619,11 +625,23 @@
   .py-\[5rem\] {
     padding-block: 5rem;
   }
+  .py-\[6rem\] {
+    padding-block: 6rem;
+  }
   .py-\[7rem\] {
     padding-block: 7rem;
   }
+  .py-\[8rem\] {
+    padding-block: 8rem;
+  }
+  .py-\[10rem\] {
+    padding-block: 10rem;
+  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -646,18 +664,6 @@
   .pt-\[7rem\] {
     padding-top: 7rem;
   }
-  .pt-\[8rem\] {
-    padding-top: 8rem;
-  }
-  .pt-\[9rem\] {
-    padding-top: 9rem;
-  }
-  .pt-\[10rem\] {
-    padding-top: 10rem;
-  }
-  .pt-\[11rem\] {
-    padding-top: 11rem;
-  }
   .pt-\[18\.5rem\] {
     padding-top: 18.5rem;
   }
@@ -669,6 +675,9 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
   .pb-\[2\.5rem\] {
     padding-bottom: 2.5rem;
